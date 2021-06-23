@@ -1,0 +1,75 @@
+<!-- 
+    Document   : ExampleComboBox
+    Created on : 20/07/2009, 04:21:23 PM
+    Author     : Alverik
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../Item/Item.js"></script>
+    <script type="text/javascript" src="../Item/Button.js"></script>
+    <script type="text/javascript" src="../Item/ComboBox.js"></script>
+    <script type="text/javascript" src="../Item/DataSet.js"></script>
+    <script type="text/javascript" src="../Item/Button.js"></script>
+    <script type="text/javascript" src="../json2.js"></script>
+    <script type="text/javascript">
+       
+       var combo1;
+       
+        var dataSet = new DataSet({
+            url:'DataExample/estados.json',
+            root:'estados',
+            displayValues:['estado'],
+            id:'id'
+        });
+        
+         var combo2 = new ComboBox({
+            dataSet:dataSet,
+            id:'combo2',
+            emptyValue:'0',
+            displayEmptyValue:'Seleccionar...',
+            autoLoad:false
+         });
+        
+        function onLoadBody(){
+            var datos = {
+                data:[
+                    {id:'1',value:'México'},
+                    {id:'2',value:'D.F.'},
+                    {id:'3',value:'Puebla'},
+                    {id:'4',value:'Pachuca'},
+                ]
+            };
+            
+            combo1 = new ComboBox({
+                dataSet:dataSet,
+                id:'id',
+                emptyValue:'0',
+                displayEmptyValue:'Seleccionar...'
+            });
+            combo1.render('comboDiv');
+            
+            combo2.render('combo2Div');
+            new Button({value:'clean',onclick:cleanCombo1}).render("comboDiv");
+        }
+        
+        function loadCombo(){
+            combo2.load();
+        }
+        
+        function cleanCombo1(){
+            combo1.clean();
+        }
+        
+    </script>
+  </head>
+  <body onload="onLoadBody()">
+      Combo llenado automaticamente
+      <div id="comboDiv"></div>
+      Combo llenado manualmente
+      <div id="combo2Div"></div>
+      <input type="button" value="Llena Combo 2" onclick="loadCombo()" />
+  </body>
+</html>

@@ -1,0 +1,30 @@
+/* 
+    Document   : ToolTipStyle
+    Created on : 22/07/2009, 05:17:10 PM
+    Author     : QTX
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.ToolTipStyle{
+	background-color:#FFFFCC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-style: normal;
+	font-weight: bold;
+	color: #000000;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+	border-bottom-width:thin;
+	border-right-style:solid;
+	border-right-color:#000000;
+	border-right-width:thin;
+	line-height:15px;
+	padding-left: 10px;
+}
+

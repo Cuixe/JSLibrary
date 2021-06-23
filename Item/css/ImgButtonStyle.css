@@ -1,0 +1,44 @@
+/* 
+    Document   : ImgButtonStyle
+    Created on : 24/07/2009, 01:55:07 PM
+    Author     : QTX
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.ImgButtonUp{
+    border-bottom-style:solid;
+    border-bottom-color:#666666;
+    border-bottom-width:2px;
+    border-right-style:solid;
+    border-right-color:#666666;
+    border-right-width:2px;
+    border-left-style:solid;
+    border-left-color:#EBEBEB;
+    border-left-width:2px;
+    border-top-style:solid;
+    border-top-color:#EBEBEB;
+    border-top-width:2px;
+    cursor:pointer;
+}
+
+.ImgButtonPress{
+    border-top-style:solid;
+    border-top-color:#666666;
+    border-top-width:2px;
+    border-left-style:solid;
+    border-left-color:#666666;
+    border-left-width:2px;
+    border-right-style:solid;
+    border-right-color:#EBEBEB;
+    border-right-width:2px;
+    border-bottom-style:solid;
+    border-bottom-color:#EBEBEB;
+    border-bottom-width:2px;
+    cursor:pointer;
+}

@@ -1,0 +1,23 @@
+/* 
+    Document   : DataTextStyle
+    Created on : 21/07/2009, 02:18:06 PM
+    Author     : QTX
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.DataTextImg {
+    background-image:url(../img/calendarIcon.png);
+    width:18px;
+    height:18px;
+    background-repeat: no-repeat;
+}
+
+.DataTextLabel{
+    width:80px;
+}

@@ -1,0 +1,8 @@
+{
+    "calles":[
+        {"id":"1","calle":"Benito Juarez"},
+        {"id":"2","calle":"Santa Cecilia"},
+        {"id":"3","calle":"Miguel Hidalgo"},
+        {"id":"4","calle":"Lazaro Cardenaz"}
+    ]
+}

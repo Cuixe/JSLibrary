@@ -1,0 +1,41 @@
+/* 
+    Document   : PanelStyle
+    Created on : 20/07/2009, 07:27:38 PM
+    Author     : Alverik
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+.Panel{
+    border:thin solid #CCCCCC;
+    background-color:#DBDBDB;
+    width:100%;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:12px;
+    color:#000000;
+}
+
+.PanelTitle {
+    background-image:url(../img/panelTitle.png);
+    color: #000000;
+    font:Verdana, Arial, Helvetica, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    text-align:left;
+    padding-left:0px;
+    width:100%;
+}
+
+table.Panel td { 
+    vertical-align:top;
+}
+
+table.Panel table{
+    border:none;
+}
+

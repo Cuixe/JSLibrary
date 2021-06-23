@@ -1,0 +1,13 @@
+{
+    "data":[
+        {"nombre":"Hugo","paterno":"Fuentes","materno":"Salazar","status":"inactivo"},
+        {"nombre":"Diana","paterno":"Perez","materno":"Corona","status":"activo"},
+        {"nombre":"Juan","paterno":"Flores","materno":"Gonzalez","status":"inactivo"},
+        {"nombre":"Eliel","paterno":"Martinez","materno":"Sopena","status":"activo"},
+        {"nombre":"Hugo","paterno":"Fuentes","materno":"Salazar","status":"inactivo"},
+        {"nombre":"Diana","paterno":"Perez","materno":"Corona","status":"activo"},
+        {"nombre":"Juan","paterno":"Flores","materno":"Gonzalez","status":"inactivo"},
+        {"nombre":"Eliel","paterno":"Martinez","materno":"Sopena","status":"activo"},
+        {"nombre":"Hugo","paterno":"Fuentes","materno":"Salazar","status":"inactivo"},
+    ]
+}

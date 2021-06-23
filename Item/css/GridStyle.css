@@ -1,0 +1,81 @@
+/* 
+Document   : StyleGrid
+Created on : 9/07/2009, 11:34:41 AM
+Author     : Alverik
+Description:
+Purpose of the stylesheet follows.
+*/
+
+.Grid{
+    border:thin solid #003366;
+    border-spacing:0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    width:auto;
+    height:auto;
+}
+
+.HeadGrid {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0000CC;
+    background-image: url(../img/headerGrid.png);
+    background-attachment: scroll;
+    background-repeat:  repeat-x;
+}
+
+.CellHeadGrid{
+    margin-top: 2px;
+    margin-right: 40px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+
+.RowGrid1{
+    background-color:#ffffff;
+    font-size: 12px;
+    color: #000000;
+}
+
+.RowGrid2{
+    background-color:#E9E9E9;
+    font-size: 12px;
+    color: #000000;
+}
+
+.RowGridOver{
+    background-color:#999999;
+    font-size: 12px;
+    color: #000000;
+}
+
+.FooterGrid{
+    background-image:url(../img/footerGrid.gif)
+}
+.GridPagin{
+    font-family: "Courier New", Courier, mono;
+    width:auto;
+    font-weight: bold;
+    font-size:14px;
+}
+
+.BoldSelectedPage{
+    background-color:#B2B2B2;
+    color:#0000FF;
+    font-style: italic
+}
+
+.IconOrderUp{
+	background-image:url(../img/sortAsc.gif);
+	height:8px;
+	width:8px;
+	background-repeat: no-repeat;
+	background-position: center center;	
+}
+
+.IconOrderDown{
+	background-image:url(../img/sortDesc.gif);
+	height:8px;
+	width:8px;
+	background-repeat: no-repeat;
+	background-position: center center;	
+}

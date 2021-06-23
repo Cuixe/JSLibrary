@@ -1,0 +1,106 @@
+<!-- 
+    Document   : ExampleTableForm
+    Created on : 16/07/2009, 06:19:59 PM
+    Author     : Alverik
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../json2.js"></script>
+    <script type="text/javascript" src="../Item/Item.js"></script>
+    <script type="text/javascript" src="../Item/Button.js"></script>
+    <script type="text/javascript" src="../Item/Text.js"></script>
+    <script type="text/javascript" src="../Item/DateText.js"></script>
+    <script type="text/javascript" src="../Item/PanelTable.js"></script>
+    <script type="text/javascript" src="../Item/FormTable.js"></script>
+    <script type="text/javascript" src="../Item/JQuery/jquery.js"></script>
+    <script type="text/javascript" src="../Item/Calendar/AnchorPosition.js"></script>
+    <script type="text/javascript" src="../Item/Calendar/CalendarPupup.js"></script>
+    <script type="text/javascript" src="../Item/Calendar/Date.js"></script>
+    <script type="text/javascript" src="../Item/Calendar/PopupWindow.js"></script>
+    <link rel="Stylesheet" type="text/css" href="../Item/css/indexStyle.css"/>
+    <script type="text/javascript">
+        var form;
+        var form2;
+        function onBodyLoad(){
+            var elemntForm = {
+                    items:[{
+                          row:[
+                              {item:'Label',value:'Nombre Alumno'},
+                              {item:'Text',config:{id:'nombre',name:'nombre',onlyLetter:true}}
+                          ]},{
+                          row:[
+                              {item:'Label',value:'Apellido Paterno'},
+                              {item:'Text',config:{id:'paterno',name:'paterno',onlyLetter:true}}
+                          ]},{
+                          row:[
+                              {item:'Label',value:'Apellido Materno'},
+                              {item:'Text',config:{id:'materno',name:'materno',onlyLetter:true}}
+                          ]},{
+                          row:[
+                              {item:'Label',value:'Fecha Nacimiento'},
+                              {item:'DateText',config:{id:'fechaNacimiento',name:'fechaNacimiento',urlCalendarIcon:'JSLibrary/Item/img/calendarIcon.png'}}
+                          ]},{
+                          row:[
+                              {item:'Button',config:{id:'enviar',value:'Actualizar',onclick:enviar}},
+                              {item:'Button',config:{id:'limpiar',value:'Limpiar',onclick:limpiar}}
+                          ]}
+                       ]
+                    };
+            
+            var datos ={
+                    id:'1',
+                    nombre:'Hugo',
+                    paterno:'Fuentes',
+                    materno:'Salazar',
+                    fechaNacimiento:'02/03/2009'
+                };
+                
+            form = new FormTable({
+                action:'Recibe Datos.jsp',
+                method:'post',
+                title:'Example Form Table',
+                id : 'miForm',
+                elements : elemntForm.items,
+                data : datos
+            });
+            form2 = form.clone();
+            form2.render('formDiv2');
+            new Button({value:'Submint',onclick:enviarSubmit}).render('formDiv2');
+            document.getElementById('formDiv').appendChild(form.createItem());
+        }
+        
+        function enviar(){
+            form.submitAjax({error:unError,complete:completo});
+            //form.submit();
+        }
+        
+        function enviarSubmit(){
+            form2.submit();
+        }
+        
+        function limpiar(){
+            form.clean();
+        }
+        
+        function unError(request,textStatus,errorThrown){
+            alert(errorThrown);
+        }
+        
+        function completo(request,textStatus){
+            alert(request.status);
+            alert(request.responseText);
+            form.clean();
+        }
+        
+    </script>
+    
+  </head>
+  <body onload="onBodyLoad()">
+      <div style="position: absolute;background-color:white" id="calendarDiv"></div>
+      <div id="formDiv"></div>
+      <div id="formDiv2"></div>
+  </body>
+</html>

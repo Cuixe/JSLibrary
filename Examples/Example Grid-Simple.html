@@ -1,0 +1,57 @@
+<!-- 
+    Document   : ExampleGrid
+    Created on : 16/07/2009, 02:37:45 PM
+    Author     : Alverik
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../Item/Grid.js"></script>
+    <script type="text/javascript" src="../Item/HeadCellGrid.js"></script>
+    <script type="text/javascript" src="../Item/HeadRowGrid.js"></script>
+    <script type="text/javascript" src="../Item/CellGrid.js"></script>
+    <script type="text/javascript" src="../Item/RowGrid.js"></script>
+    <script type="text/javascript" src="../Item/GridPagin.js"></script>
+    <script type="text/javascript" src="../Item/DataSet.js"></script>
+    <script type="text/javascript" src="../Item/Item.js"></script>
+    <link rel="Stylesheet" type="text/css" href="../Item/css/IndexStyle.css"/>
+    <script type="text/javascript">
+        var datos={data:[
+                {idAlumno:1,nombre:'Hugo',paterno:'Fuentes',materno:'Salazar',status:'inactivo'},
+                {idAlumno:2,nombre:'Diana',paterno:'Perez',materno:'Corona',status:'activo'},
+                {idAlumno:3,nombre:'Juan',paterno:'Flores',materno:'Gonzalez',status:'inactivo'},
+                {idAlumno:4,nombre:'Eliel',paterno:'Martinez',materno:'Sopena',status:'activo'},
+                {idAlumno:5,nombre:'Hugo',paterno:'Fuentes',materno:'Salazar',status:'inactivo'},
+                {idAlumno:6,nombre:'Diana',paterno:'Perez',materno:'Corona',status:'activo'},
+                {idAlumno:7,nombre:'Juan',paterno:'Flores',materno:'Gonzalez',status:'inactivo'},
+                {idAlumno:8,nombre:'Eliel',paterno:'Martinez',materno:'Sopena',status:'activo'},
+                {idAlumno:9,nombre:'Hugo',paterno:'Fuentes',materno:'Salazar',status:'inactivo'},
+            ]};
+        
+            var dataSet = new DataSet({
+                data:datos,
+                displayValues:['idAlumno','nombre','paterno','materno','status'],
+                root:'data'
+            });
+            
+            var gridObject  = new Grid({
+                dataSet:dataSet,
+                headers:['IdAlumno','Nombre Persona','Apellido Paterno','Apellido Materno','Estatus'],
+                sortable:[true,true,true,true,false,true],
+                editableCell:[true,true,false,true],
+                colspan:[1,1,1,1,2],
+                displayRows:4
+            });
+        
+        function onBodyLoad(){
+            document.getElementById('grid').appendChild(gridObject.createItem());
+        }
+        
+    </script>
+  </head>
+  <body onload="onBodyLoad()">
+      <div id="grid"></div>
+  </body>
+</html>

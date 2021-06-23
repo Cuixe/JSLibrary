@@ -1,0 +1,27 @@
+/* 
+    Document   : indexStyle
+    Created on : 21/07/2009, 04:06:40 PM
+    Author     : QTX
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/*
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+@import "DateTextStyle.css";
+@import "FormStyle.css";
+@import "PanelStyle.css";
+@import "GridStyle.css";
+@import "CalendarStyle.css";
+@import "ToolTipStyle.css";
+@import "ImgButtonStyle.css";
+
+@import "menu/default.css";
+@import "menu/default.ultimate.css";
+@import "menu/dropdown.css";
+@import "menu/dropdown.vertical.css";
+
+

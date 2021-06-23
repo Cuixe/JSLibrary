@@ -1,0 +1,8 @@
+ {
+    "estados":[
+        {"id":"1","estado":"México"},
+        {"id":"2","estado":"D.F."},
+        {"id":"3","estado":"Puebla"},
+        {"id":"4","estado":"Pachuca"}
+    ]
+}

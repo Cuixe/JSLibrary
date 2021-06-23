@@ -1,0 +1,8 @@
+{
+    "municipios":[
+        {"id":"1","municipio":"Ecatepec"},
+        {"id":"2","municipio":"Coacalco"},
+        {"id":"3","municipio":"Acolman"},
+        {"id":"4","municipio":"Nezahualcoyotl"}
+    ]
+}

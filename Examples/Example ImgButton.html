@@ -1,0 +1,30 @@
+<!-- 
+    Document   : Example ImgButton
+    Created on : 24/07/2009, 02:13:48 PM
+    Author     : QTX
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="../Item/Item.js"></script>
+    <script type="text/javascript" src="../Item/ImgButton.js"></script>
+    <link rel="Stylesheet" type="text/css" href="../Item/css/IndexStyle.css"/>
+    <link rel="Stylesheet" type="text/css" href="buttons.css"/>
+    <script type="text/javascript">
+        function onLoadBody(){
+            var imgButton = new ImgButton({
+                id:'imgButton',
+                className:'calendarButton',
+                title:'Calendario',
+                disabled:true
+            }).render('button');
+        }
+    </script>
+  </head>
+  <body onload="onLoadBody()">
+      <div id="button"></div>
+      <input type="button" title="Algun mesaje" value="XXX">
+  </body>
+</html>
